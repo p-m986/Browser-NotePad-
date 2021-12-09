@@ -1,0 +1,48 @@
+#container{
+	background:#6699ff;
+	margin: 0px;
+	padding:0px;
+	position:fixed;
+}
+#new_button{
+	margin:0px;
+	padding:3px;
+	display:inline-block;
+	margin-left:5px;
+	background:#C0C0C0;
+}
+#background_button{
+	margin:0px;
+	padding:3px;
+	display:inline-block;
+	margin-left:5px;
+	background:#C0C0C0;
+}
+#save_button{
+	margin:0px;
+	padding:3px;
+	display:inline-block;
+	margin-left:5px;
+	background:#C0C0C0;
+}#format_button{
+	margin:0px;
+	padding:3px;
+	display:inline-block;
+	margin-left:5px;
+	background:#C0C0C0;
+}
+
+#write{
+	background-color:#C0C0C0;
+	margin:0px;
+	padding:2px;
+	border:5px solid black;
+	resize:none;
+	height:700px;
+	width:1522px;
+}
+#text_format_options{
+	display:none;
+}
+#save{
+}
