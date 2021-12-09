@@ -1,0 +1,111 @@
+<!doctypeHTML>
+<html>
+<head>
+<link rel = "stylesheet" href = "Css_file.css">
+</head>
+<body style = "margin:0px; padding:0px;">
+<script src = "jquery.js"></script>
+<script>
+	// make new button replace all current text and put a value in the text box
+	
+			$(document).ready(function(){
+				$("#new_button").click(function(){
+					$("textarea#write").val("");
+				});
+			});
+		//displays the options to do make changes to text in the text area
+			
+			$(document).ready(function(){
+				$("#format_button").click(function(){
+					$("#text_format_options").css({"display":"block"});
+				});
+			});
+			
+	// file makes a drop down and shows the current files that can be opened
+	// style lets user change font-size, font-color, font-style
+			$(document).ready(function(){
+				$("#size_input").on("hover mouseleave keypress keyup", function(){
+					$(".change_").css({"font-size": $('[name="size_text_area"]').val() + "px"});
+				});
+			});
+			//font style
+			$(document).ready(function(){
+				$("#style_input").on("hover mouseleave keypress keyup", function(){
+					$(".change_").css({"font-family": $('[name="style_text_area"]').val()});
+				});
+			});
+			//text color
+			$(document).ready(function(){
+				$("#text_color").on("hover mouseleave keypress keyup", function(){
+					$(".change_").css({"color": $('[name="text_color"]').val()});
+				});
+			});
+	// background lets user change the background of the text area
+			$(document).ready(function(){
+				$("#background_input").click(function(){
+					alert("url" + "(" + $('[name="background_input"]').val() + ")");
+					$("#write").css({"background-image": "url" + "(" + $('[name="background_input"]').val() + ")"});
+				});
+			});
+</script>
+
+<div id = "container">
+<div id = "new_button">New</div>
+<div id = "format_button" onclick="text_format_options.style.display = 'block';">
+		Text Formatting
+		<div id = "text_format_options">
+		
+		<!--size content-->
+			<div class = "Size-content-class" id = "Size-content-id">
+				<div>
+				  Size
+				  <input list = "size" id = "size_input" name = "size_text_area" type = "text" size = "25"></input>
+				  <datalist id="size">
+					  <option value = "5">
+					  <option value = "7">
+					  <option value = "9">
+					  <option value = "12">
+					  <option value = "15">
+					  <option value = "18">
+					  <option value = "21">
+				  </datalist>
+				</div>
+		<!-- Style options-->
+				<div class = "Style-content-class" id = "Style-content-id">
+					Font Style
+					<input list = "style" id = "style_input" name = "style_text_area" type = "text"></input>
+					<datalist id="style">
+					  <option value = "Times New Roman, serif">
+					  <option value = "Courier New">
+					  <option value = "Comic,Sans,MS,Comic,Sans,cursive">
+					  <option value = "fantasy">
+					  <option value = "Chalkduster">
+					  <option value = "Stencil Std, fantasy">
+					  <option value = "Snell Roundhand, cursive">
+					</datalist>
+				</div>
+		<!-- Color of contetnt -->
+				<div class = "Color-content-class" id = "Color-content-id">
+					Color
+					<input id = "text_color" name = "text_color" type = "text"></input>
+				</div>
+		<!-- Close button --><div>abc
+			<button onclick="this.parentElement.style.display = 'hidden';"></button></div>
+		</div>
+</div>
+<!--BackGround image box-->
+<div id = "background_button">BackGround
+	<input id = "backgrou" name = "background_input" type = "text"></input>
+	<button id = "background_input">Apply BackGround</button>
+</div>
+<div id = "save_button">Save</div>
+
+<!-- Text area Starts -->
+<textarea id="write" class = "change_" type ="text">
+</textarea>
+
+
+</div>
+
+</body>
+</html>
